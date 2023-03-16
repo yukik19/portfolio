@@ -10,6 +10,13 @@
   const header = document.querySelector('.sp');
   const home = document.querySelector('.home');
 
+  const toggleMenu = function() {
+    spMenu.classList.toggle('show');
+    open.classList.toggle('show');
+    close.classList.toggle('show');
+    header.classList.toggle('show');
+  }
+
   home.addEventListener('click', () => {
     spMenu.classList.remove('show');
     open.classList.add('show');
@@ -19,19 +26,13 @@
 
   burgers.forEach(burger => {
     burger.addEventListener('click', () => {
-    spMenu.classList.toggle('show');
-    open.classList.toggle('show');
-    close.classList.toggle('show');
-    header.classList.toggle('show');
+      toggleMenu();
     });
   });
 
   lists.forEach(list => {
     list.addEventListener('click', () => {
-      spMenu.classList.toggle('show');
-      open.classList.toggle('show');
-      close.classList.toggle('show');
-      header.classList.toggle('show');
+      toggleMenu();
     });
   });
 }
